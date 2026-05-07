@@ -2,6 +2,21 @@
 /target/
 **/*.rs.bk
 
+# Hasil binaan terjana (kompilasi C)
+*.exe
+*.obj
+*.c
+!examples/**/*.c
+*.out
+*.o
+*.so
+*.dylib
+
+# Fail log dan ujian sementara
+*.txt
+!README.md
+!.gitignore
+
 # IDE
 .vscode/
 .idea/

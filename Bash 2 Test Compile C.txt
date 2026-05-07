@@ -1,2 +1,0 @@
-cargo run -- examples/hello.nl > output.c
-gcc output.c -o program && ./program
