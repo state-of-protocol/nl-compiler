@@ -1,0 +1,7 @@
+[package]
+name = "nl-semantic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nl-ast = { path = "../nl-ast" }

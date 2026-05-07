@@ -1,0 +1,10 @@
+[package]
+name = "nl-driver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nl-lexer = { path = "../nl-lexer" }
+nl-parser = { path = "../nl-parser" }
+nl-semantic = { path = "../nl-semantic" }
+nl-codegen = { path = "../nl-codegen" }

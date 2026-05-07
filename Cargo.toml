@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "crates/nl-lexer",
+    "crates/nl-ast",
+    "crates/nl-parser",
+    "crates/nl-semantic",
+    "crates/nl-codegen",
+    "crates/nl-driver",
+]
+resolver = "2"

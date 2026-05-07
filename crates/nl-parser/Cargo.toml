@@ -1,0 +1,8 @@
+[package]
+name = "nl-parser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nl-lexer = { path = "../nl-lexer" }
+nl-ast = { path = "../nl-ast" }
