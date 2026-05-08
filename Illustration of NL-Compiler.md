@@ -3,30 +3,36 @@
 Rajah di bawah menunjukkan aliran penuh bagaimana kod sumber NEO Language (NL) diproses sehingga menjadi aturcara boleh laksana.
 
 Kod Sumber NL (*.nl)
-↓
-┌──────────────────────────────────────┐
-│ Pengkompil NL │
+│
+▼
+┌────────────────────────────────────┐
+│ PENGKOMPIL NL │
 │ (Ditulis dalam Rust) │
 │ │
-│ • Lekser (nl-lexer) │
-│ • Penghurai (nl-parser) │
-│ • Penganalisis Semantik (nl-semantic)│
-│ • Penjana Kod C (nl-codegen) │
-└──────────────────┬───────────────────┘
-↓
+│ ● Lekser (nl-lexer) │
+│ ● Penghurai (nl-parser) │
+│ ● Semantik (nl-semantic) │
+│ ● Penjana Kod (nl-codegen) │
+└────────────────┬───────────────────┘
+│
+▼
 Kod C (program.c)
-↓
-┌──────────────────────────────────────┐
-│ Pengkompil C luaran │
+│
+▼
+┌────────────────────────────────────┐
+│ PENGKOMPIL C LUARAN │
 │ (GCC / Clang / MSVC) │
-└──────────────────┬───────────────────┘
-↓
+└────────────────┬───────────────────┘
+│
+▼
 Aturcara Boleh Laksana
 (hello.exe / a.out)
-↓
+│
+▼
 Program berjalan bebas
 tanpa kebergantungan kepada Rust
 
+*Rajah 1: Seni Bina Semasa Pengkompil NL*
 
 ---
 
