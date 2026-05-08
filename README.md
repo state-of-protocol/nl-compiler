@@ -4,6 +4,7 @@
 ![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange)
 ![C](https://img.shields.io/badge/Output-C-green)
 ![Lesen](https://img.shields.io/badge/Lesen-MIT-brightgreen)
+![Status](https://img.shields.io/badge/Status-MVP%20Siap-success)
 
 **NEO Language (NL)** ialah bahasa pengaturcaraan sistem yang dibina khas untuk ekosistem **NEO OS**. Ia menggandingkan **keselamatan ala Rust** dengan **kesederhanaan ala Go**, memberikan pengalaman pembangunan yang pantas, selamat, dan mudah difahami. NL direka sebagai bahasa peringkat tinggi yang dapat menyasarkan pelbagai pelantar sasaran melalui penjanaan kod C.
 
@@ -15,10 +16,12 @@
 
 Komponen utama pengkompil NL adalah:
 
-*   **Lekser** – Mengecam token dalam kod sumber (kata kunci Melayu seperti `biar`, `jika`, `sementara` dan operator biasa).
-*   **Penghurai** – Membina Pokok Sintaks Abstrak (AST) dengan tatabahasa yang jelas.
-*   **Penganalisis Semantik** – Menyemak pengisytiharan pemboleh ubah dan penggunaan simbol.
-*   **Penjana Kod** – Mentranslasikan AST kepada kod C yang boleh dikompil oleh mana-mana pengkompil C standard.
+- **Lekser** – Mengecam token dalam kod sumber (kata kunci Melayu seperti `biar`, `jika`, `sementara` dan operator biasa).
+- **Penghurai** – Membina Pokok Sintaks Abstrak (AST) dengan tatabahasa yang jelas.
+- **Penganalisis Semantik** – Menyemak pengisytiharan pemboleh ubah dan penggunaan simbol.
+- **Penjana Kod** – Mentranslasikan AST kepada kod C yang boleh dikompil oleh mana-mana pengkompil C standard.
+
+Untuk memahami hala tuju jangka panjang (termasuk sasaran untuk kernel NEO OS), sila rujuk **[vision_process.md](vision_process.md)**.
 
 ---
 
@@ -115,26 +118,35 @@ cargo test -p nl-lexer
 
 ---
 
+## 📚 Dokumentasi Lanjutan
+
+- **[log_workflow.md](log_workflow.md)** – Rekod penuh perjalanan pembangunan dari awal sehingga kini.
+- **[vision_process.md](vision_process.md)** – Visi strategik untuk menjadikan NEO Language asas kepada sistem pengendalian NEO OS sepenuhnya.
+- **[Illustration of NL-Compiler.md](Illustration%20of%20NL-Compiler.md)** – Rajah dan penjelasan seni bina pengkompil.
+
+---
+
 ## 🛠️ Teknologi Di Sebalik Tabir
 
-*   **Bahasa Pelaksana**: Rust
-*   **Analisis Leksikal**: Manual (tanpa penjana lekser)
-*   **Penghuraian**: *Recursive descent* dengan *Pratt parser* untuk ungkapan.
-*   **Penjanaan Kod**: C99 – untuk keserasian maksimum dengan GCC, Clang, MSVC.
-*   **Pengurusan Memori**: Dirancang menyokong pemilikan (seperti Rust) melalui analisis statik pada masa depan.
+- **Bahasa Pelaksana**: Rust
+- **Analisis Leksikal**: Manual (tanpa penjana lekser)
+- **Penghuraian**: *Recursive descent* dengan *Pratt parser* untuk ungkapan.
+- **Penjanaan Kod**: C99 – untuk keserasian maksimum dengan GCC, Clang, MSVC.
+- **Pengurusan Memori**: Dirancang menyokong pemilikan (seperti Rust) melalui analisis statik pada masa depan.
 
 ---
 
 ## 🚧 Pelan Hala Tuju (Roadmap)
 
-*   [x] Lekser & Penghurai asas
-*   [x] Penjanaan kod C (MVP)
-*   [ ] Fungsi terbina tambahan (`input`, `assert`, dll.)
-*   [ ] Sokongan jenis data eksplisit dan inferens jenis
-*   [ ] Penambahbaikan pengurusan ingatan
-*   [ ] *Backend* LLVM untuk prestasi optimum
-*   [ ] Pustaka standard NL
-*   [ ] Alat CLI `nl` yang lengkap (bina, uji, format)
+- [x] Lekser & Penghurai asas
+- [x] Penjanaan kod C (MVP)
+- [x] Fungsi terbina `println`
+- [ ] Fungsi terbina tambahan (`input`, `assert`, dll.)
+- [ ] Sokongan jenis data eksplisit dan inferens jenis
+- [ ] Penambahbaikan pengurusan ingatan
+- [ ] *Backend* LLVM untuk prestasi optimum
+- [ ] Pustaka standard NL
+- [ ] Alat CLI `nl` yang lengkap (bina, uji, format)
 
 ---
 
